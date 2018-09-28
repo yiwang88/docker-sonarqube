@@ -58,7 +58,6 @@ RUN addgroup -S sonarqube && adduser -S -G sonarqube sonarqube \
 #     && rm -rf $SONARQUBE_HOME/bin/*
 
 COPY --from=builder /opt/sonarqube/ /home/sonarqube
-RUN chown -R sonarqube:sonarqube /home/sonarqube
 
 VOLUME "$SONARQUBE_HOME/data"
 
