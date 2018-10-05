@@ -2,9 +2,7 @@
 
 set -e
 
-echo "Setup openrc ..." && openrc && touch /run/openrc/softlevel
-echo Starting ssh service...
-rc-service sshd start
+
 
 if [ "${1:0:1}" != '-' ]; then
   exec "$@"
